@@ -10,7 +10,15 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"],
+      "~~/*": ["./*"],
+      "@@/*": ["./*"]
+    },
+    "allowJs":true,
   },
-  "include": ["src/**/*", "tests/**/*","../client/nuxt.config.js"]
+  "include": ["server/**/*", "client/**/*", "nuxt.config.js"],
+  "exclude": ["node_modules", ".nuxt", "dist"]
 }
